@@ -1,0 +1,2 @@
+main : main.cpp tarnished.cpp smithing_stone.cpp normal_smithing_stone.cpp somber_smithing_stone.cpp weapon.cpp normal_weapon.cpp somber_weapon.cpp tarnished.h smithing_stone.h normal_smithing_stone.h somber_smithing_stone.h  weapon.h normal_weapon.h somber_weapon.h 
+	g++ main.cpp tarnished.cpp smithing_stone.cpp normal_smithing_stone.cpp somber_smithing_stone.cpp weapon.cpp normal_weapon.cpp somber_weapon.cpp -o main -std=c++11

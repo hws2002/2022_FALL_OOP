@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/wooseokhan/Documents/GitHub/2022_FALL_OOP'
+make: Leaving directory `/Users/wooseokhan/Documents/GitHub/2022_FALL_OOP'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
