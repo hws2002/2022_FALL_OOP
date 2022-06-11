@@ -8,4 +8,4 @@ lecture notes are on https://github.com/thu-coai/THUOOP
 
 期末考试(FINAL EXAM)   
 2021年考试题：http://115.182.62.169:8000/contest/94   
-2020年考试题：http://115.182.62.169:8000/problem/61，http://115.182.62.169:8000/problem/62，http://115.182.62.169:8000/problem/63   
+2020年考试题：http://115.182.62.169:8000/problem/61 http://115.182.62.169:8000/problem/62 http://115.182.62.169:8000/problem/63   
