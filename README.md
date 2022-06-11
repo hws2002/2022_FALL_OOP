@@ -5,6 +5,10 @@ Sorted out the assignments and teaching contents of the object-oriented programm
 
 课件在 https://github.com/thu-coai/THUOOP (黄老师） 或 https://github.com/thunlp/OOP-THU/   （刘老师）   
 lecture notes are on https://github.com/thu-coai/THUOOP or https://github.com/thunlp/OOP-THU/ 
+   
+UOJ习题征集(Problem Proposal)   
+https://github.com/JianGuanTHU/UOJ_Offline/issues/   
+example: https://github.com/JianGuanTHU/UOJ_Offline/blob/master/README.md   
 
 期末考试(FINAL EXAM)   
 2021年考试题：http://115.182.62.169:8000/contest/94   
