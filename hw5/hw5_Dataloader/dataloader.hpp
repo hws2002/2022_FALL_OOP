@@ -44,15 +44,23 @@ private:
     vector<int> _rand_order;
     int batch_size=0;
     //Enter your code here
-    int m=0;
+    int count;
     vector< vector<int> > sentences;
     vector< int > inDex;
-    vector< vector< int> > c_sentences[6];
-    
+    vector< vector< int> > c_sentences[1000];
+
 public:
     void setBatchSize(int N){
+        //c_sentences 먼저 초기화하기
+        for(int i=0;i<count;i++){
+            for(int j=0;j<c_sentences[i].size();j++){
+                c_sentences[i][j].clear();
+            }
+            c_sentences[i].clear();
+        }
         this->batch_size = N; // can also change
-        for(int i=0;i<_rand_order.size();){
+        count = 0;
+        for(int i = 0;i<_rand_order.size();){
             int j = 0;
             int max_size = 0;
             while(j<N && i+j<_rand_order.size()){
@@ -62,11 +70,11 @@ public:
             }
             for(int k=0;k<j;k++){
                 sentences[_rand_order[i+k]].resize(max_size,0);
+                c_sentences[count].push_back(sentences[_rand_order[i+k]]);
             }
-            i +=j;
+            i += j;
+            count++;
         }
-        c_sentences[m] = sentences;
-        m++;
     }
 
     void setOrder(vector<int>& x){
@@ -77,7 +85,7 @@ public:
     }
 
     void addData(vector<int> sent_encoding){
-        //Enter you code here;
+        //Enter your code here;
         sentences.push_back(sent_encoding);
         inDex.push_back(sent_encoding.size());
     }
@@ -86,13 +94,12 @@ public:
     {
         using iterator_category = std::forward_iterator_tag;
         using difference_type   = std::ptrdiff_t;
-        using value_type = vector<vector< int>> ;
-        using pointer = vector<vector< int >>*;
-        using reference = vector<vector< int >>&;
+        using value_type = vector<vector< int> > ;
+        using pointer = vector<vector< int > >*;
+        using reference = vector<vector< int > >&;
 
         //Define your constructor and functions that are needed for a Iterator.
         Iterator(pointer ptr) : m_ptr(ptr) {};
-        
         reference operator*() const { return *m_ptr;}
         pointer operator->() {return m_ptr;}
         Iterator& operator++() { m_ptr++; return *this;}
@@ -108,7 +115,7 @@ public:
         return Iterator(&c_sentences[0]);
     }
     Iterator end() {
-        return Iterator(&c_sentences[m-1]);
+        return Iterator(&c_sentences[count]);
     }
 
 };

@@ -7,10 +7,8 @@ public:
     Func() {};
     virtual double getPoint(double point);
     // Todo 补充完整Func类,防止在析构时子类出现内存泄露问题
-    ~Func() {
-        
-    }
+    virtual ~Func ();
 };
 
 double Func::getPoint(double point){};
-
+Func::~Func(){};

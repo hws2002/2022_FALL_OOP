@@ -6,22 +6,7 @@
 #include<cstring>
 using namespace std;
 
-
-string matrix_unicode(vector<vector<int>>& mat){
-    // this is a function to check print batch data for answer checking
-    string unicode = "[";
-    for (auto row : mat){
-        unicode += "[";
-        for (auto elem : row){
-            unicode += std::to_string(elem)+",";
-        }
-        unicode.erase(unicode.end()-1);
-        unicode += "],";
-    }
-    unicode.erase(unicode.end()-1);
-    unicode+="]";
-    return unicode;
-}
+string matrix_unicode(vector< vector<int> >& mat);
 
 int main(){
     int N, NUM_EPOCH, BATCH_SIZE;
@@ -54,4 +39,21 @@ int main(){
         }
     }
     return 0;
+}
+
+
+string matrix_unicode(vector< vector<int> >& mat){
+    // this is a function to check print batch data for answer checking
+    string unicode = "[";
+    for (auto row : mat){
+        unicode += "[";
+        for (auto elem : row){
+            unicode += std::to_string(elem)+",";
+        }
+        unicode.erase(unicode.end()-1);
+        unicode += "],";
+    }
+    unicode.erase(unicode.end()-1);
+    unicode+="]";
+    return unicode;
 }

@@ -14,4 +14,5 @@ public:
         // f(x) = ax + b;
         return _k*point+_b;
     }
+    ~LinearFunc(){};
 };
