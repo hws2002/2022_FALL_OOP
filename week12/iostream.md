@@ -122,6 +122,24 @@ ostream& operator<<
 	return (*fn)(*this);
 }
 ```
+函数指针作为参数
+https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88
+```C++
+int max(int x, int y) 
+{ return x > y ? x : y; } 
+```
+```C++
+int main(void) 
+{ 	/* p 是函数指针 */ 
+	int (* p)(int, int) = & max; // &可以省略 
+	int a, b, c, d; 
+	printf("please input 3 numbers:"); 
+	scanf("%d %d %d", & a, & b, & c); /* 与直接调用函数等价，d = max(max(a, b), c) */ 
+	d = p(p(a, b), c); 
+	printf("the maxumum number is: %d\n", d); 
+	return 0; 
+}
+```
 
 ## **不能复制的cout**
 注意重载流运算符的方式

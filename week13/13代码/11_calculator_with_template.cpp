@@ -3,11 +3,13 @@
 #include <functional>
 #include <string>
 using namespace std;
+
 string readFromScreen()
 {
     string input; getline(cin, input);
     return input;
 }
+
 class ReadFromFile
 {
 public:
@@ -17,6 +19,17 @@ public:
         return input;
     }
 };
+
+
+string calculateAdd(string x)
+{
+    return x;
+}
+
+void writeToScreen(string x)
+{
+    cout << x;
+}
 template<class ReadFunc, class CalFunc, class WriteFunc>
 void process(ReadFunc read, CalFunc calculate, WriteFunc write)
 {
@@ -25,14 +38,6 @@ void process(ReadFunc read, CalFunc calculate, WriteFunc write)
 	write(output);
 }
 
-string calculateAdd(string x)
-{
-    return x;
-}
-void writeToScreen(string x)
-{
-    cout << x;
-}
 int main()
 {
     process(readFromScreen, calculateAdd, writeToScreen);

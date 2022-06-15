@@ -8,6 +8,7 @@ string readFromScreen()
     string input; getline(cin, input);
     return input;
 }
+
 class ReadFromFile
 {
 public:
@@ -17,6 +18,7 @@ public:
         return input;
     }
 };
+
 void process(
         function<string()> read,
         function<string(string)> calculate,

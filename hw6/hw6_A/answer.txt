@@ -1,2 +1,9 @@
 BD
+BCD
+AB
+ABD
+ACD
+CD
+AD
+C
 
